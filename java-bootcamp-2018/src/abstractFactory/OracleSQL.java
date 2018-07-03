@@ -1,6 +1,6 @@
 package abstractFactory;
 
-public class OracleSQL implements OtherSQL {
+public class OracleSQL implements IOtherSQL {
 
 	@Override
 	public void connect() {

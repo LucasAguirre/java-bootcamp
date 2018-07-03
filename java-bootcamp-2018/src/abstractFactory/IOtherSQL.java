@@ -1,5 +1,5 @@
 package abstractFactory;
 
-public interface MicrosoftSQL {
+public interface IOtherSQL {
 	void connect();
 }

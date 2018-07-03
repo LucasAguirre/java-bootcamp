@@ -1,6 +1,6 @@
 package abstractFactory;
 
-public class PostgreSQL implements OtherSQL {
+public class PostgreSQL implements IOtherSQL {
 
 	@Override
 	public void connect() {

@@ -1,7 +1,7 @@
 package abstractFactory;
 
 public class FactoryProducer {
-	   public static SQLConnection getFactory(String choice){
+	   public static ISQLConnection getFactory(String choice){
 		   
 		      if(choice.equalsIgnoreCase("Microsoft")){
 		         return new MicrosoftSQLFactory();

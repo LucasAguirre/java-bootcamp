@@ -1,6 +1,6 @@
 package abstractFactory;
 
-public class MicrosoftAccess implements MicrosoftSQL {
+public class MicrosoftAccess implements IMicrosoftSQL {
 
 	@Override
 	public void connect() {

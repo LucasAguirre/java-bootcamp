@@ -1,6 +1,6 @@
 package abstractFactory;
 
-public class MySQL implements OtherSQL {
+public class MySQL implements IOtherSQL {
 
 	@Override
 	public void connect() {

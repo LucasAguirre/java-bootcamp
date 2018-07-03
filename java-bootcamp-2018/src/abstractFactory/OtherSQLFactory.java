@@ -1,15 +1,15 @@
 package abstractFactory;
 
-public class OtherSQLFactory implements SQLConnection{
+public class OtherSQLFactory implements ISQLConnection{
 
 	@Override
-	public MicrosoftSQL getMicrosoftSQL(String sql) {
+	public IMicrosoftSQL getMicrosoftSQL(String sql) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public OtherSQL getOtherSQL(String sql) {
+	public IOtherSQL getOtherSQL(String sql) {
 		if(sql==null)
 			return null;
 		if(sql.equalsIgnoreCase("MySQL"))

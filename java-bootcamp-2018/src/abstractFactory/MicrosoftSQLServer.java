@@ -1,6 +1,6 @@
 package abstractFactory;
 
-public class MicrosoftSQLServer implements MicrosoftSQL {
+public class MicrosoftSQLServer implements IMicrosoftSQL {
 
 	@Override
 	public void connect() {

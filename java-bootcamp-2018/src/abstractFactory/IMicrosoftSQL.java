@@ -1,5 +1,5 @@
 package abstractFactory;
 
-public interface OtherSQL {
+public interface IMicrosoftSQL {
 	void connect();
 }

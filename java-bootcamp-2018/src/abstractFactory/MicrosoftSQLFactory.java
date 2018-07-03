@@ -1,9 +1,9 @@
 package abstractFactory;
 
-public class MicrosoftSQLFactory implements SQLConnection{
+public class MicrosoftSQLFactory implements ISQLConnection{
 
 	@Override
-	public MicrosoftSQL getMicrosoftSQL(String sql) {
+	public IMicrosoftSQL getMicrosoftSQL(String sql) {
 		if(sql==null)
 			return null;
 		if(sql.equalsIgnoreCase("MicrosoftAccess"))
@@ -14,7 +14,7 @@ public class MicrosoftSQLFactory implements SQLConnection{
 	}
 
 	@Override
-	public OtherSQL getOtherSQL(String sql) {
+	public IOtherSQL getOtherSQL(String sql) {
 		// TODO Auto-generated method stub
 		return null;
 	}
