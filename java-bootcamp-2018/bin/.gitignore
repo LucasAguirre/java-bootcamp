@@ -1,5 +1,6 @@
-/abstractFactory/
-/unitTest/
-/proxyPattern/
 /Singleton/
+/abstractFactory/
 /builderPattern/
+/proxyPattern/
+/unitTest/
+/com/
