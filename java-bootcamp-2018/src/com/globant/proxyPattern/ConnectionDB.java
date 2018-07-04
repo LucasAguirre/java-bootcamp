@@ -10,9 +10,8 @@ public class ConnectionDB implements IConnectionDB {
 
 	@Override
 	public boolean makeQuery(String query) {
-		System.out.println("Query return for: "+"\r"+query);
+		System.out.println("Query return for: " + "\r" + query);
 		return true;
 	}
-	
 
 }

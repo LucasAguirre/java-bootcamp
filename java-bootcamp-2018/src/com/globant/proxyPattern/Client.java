@@ -2,7 +2,7 @@ package com.globant.proxyPattern;
 
 public class Client {
 	public static void main(String[] args) {
-		IConnectionDB db= new ProxyConnectionDB();
+		IConnectionDB db = new ProxyConnectionDB();
 		System.out.println("Try connect to db");
 		db.connect();
 		System.out.println("Try make a Select query");
