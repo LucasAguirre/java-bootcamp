@@ -1,10 +1,16 @@
 package com.globant.builderPattern;
 
 public class ConnectionDB {
-	String user;
-	String pass;
+	private String user;
+	private String pass;
+
+	public ConnectionDB(String u, String p) {
+		this.user = u;
+		this.pass = p;
+	}
 
 	public ConnectionDB() {
+
 	}
 
 	public void setUser(String u) {

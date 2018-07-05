@@ -1,10 +1,13 @@
 package com.globant.unitTest;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertNotNull;
 
 import org.junit.Test;
 
-import com.globant.abstractFactory.*;
+import com.globant.abstractFactory.FactoryProducer;
+import com.globant.abstractFactory.IMicrosoftSQL;
+import com.globant.abstractFactory.IOtherSQL;
+import com.globant.abstractFactory.ISQLConnection;
 
 public class FactoryProducerUnitTest {
 

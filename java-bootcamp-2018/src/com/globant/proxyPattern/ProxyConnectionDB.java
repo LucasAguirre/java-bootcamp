@@ -2,6 +2,7 @@ package com.globant.proxyPattern;
 
 public class ProxyConnectionDB implements IConnectionDB {
 
+	static final String DELETE = "DELETE";
 	private ConnectionDB db = new ConnectionDB();
 
 	@Override
@@ -12,11 +13,12 @@ public class ProxyConnectionDB implements IConnectionDB {
 
 	@Override
 	public boolean makeQuery(String query) {
-		if (query.contains("DELETE")) {
+		if (query.contains(DELETE)) {
 			System.out.println("you don't have permission to delete");
 			return false;
-		} else
+		} else {
 			return db.makeQuery(query);
+		}
 
 	}
 

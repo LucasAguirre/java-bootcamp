@@ -1,17 +1,6 @@
 package com.globant.Singleton;
 
-public class Singleton {
-
-	public static void main(String[] args) {
-		DatabaseConnection db = DatabaseConnection.getInstance();
-		if (db.connect())
-			System.out.print("Connection Success");
-		else
-			System.out.print("Connection Failure");
-	}
-}
-
-class DatabaseConnection {
+public class DatabaseConnection {
 
 	private DbConnection db;
 	static DatabaseConnection obj = new DatabaseConnection();
