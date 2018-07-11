@@ -1,12 +1,9 @@
-package com.globant.Singleton;
+package com.globant.singleton;
 
 public class DbConnection {
 
-	public DbConnection() {
 
-	}
-
-	public boolean connect() {
+	public static boolean connect() {
 		return true;
 	}
 }

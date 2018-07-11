@@ -1,20 +1,23 @@
-package com.globant.Singleton;
+package com.globant.singleton;
 
 public class DatabaseConnection {
 
-	private DbConnection db;
-	static DatabaseConnection obj = new DatabaseConnection();
+	static DatabaseConnection obj = null;
+	  private DatabaseConnection() {}
 
-	private DatabaseConnection() {
-		db = new DbConnection();
-	}
-
-	public static DatabaseConnection getInstance() {
-		return obj;
-	}
+	  public static DatabaseConnection getInstance() {
+	        if (obj == null) {
+	            synchronized(DatabaseConnection.class) {
+	                if (obj == null) {
+	                	obj = new DatabaseConnection();
+	                }
+	            }
+	        }
+	        return obj;
+	    }
 
 	public boolean connect() {
 
-		return db.connect();
+		return DbConnection.connect();
 	}
 }
