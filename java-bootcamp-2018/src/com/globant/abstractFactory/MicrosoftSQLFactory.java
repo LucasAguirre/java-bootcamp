@@ -6,13 +6,12 @@ public class MicrosoftSQLFactory implements ISQLConnection {
 
 	@Override
 	public IMicrosoftSQL getMicrosoftSQL(String sql) {
-		if (sql == null) {
-			return null;
-		}
-		if (MICROSOFTACCESS.equalsIgnoreCase("sql")) {
-			return new MicrosoftAccess();
-		} else if (MICROSOFTSQLSERVER.equalsIgnoreCase("sql")) {
-			return new MicrosoftSQLServer();
+		if (sql != null) {
+			if (MICROSOFTACCESS.equalsIgnoreCase(sql)) {
+				return new MicrosoftAccess();
+			} else if (MICROSOFTSQLSERVER.equalsIgnoreCase(sql)) {
+				return new MicrosoftSQLServer();
+			}
 		}
 		return null;
 	}
