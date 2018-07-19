@@ -15,6 +15,7 @@ public class RecentFileList {
 	public RecentFileList(int size) {
 		this.list = new ArrayList<File>();
 		this.maxSize = size;
+
 	}
 
 	public int size() {

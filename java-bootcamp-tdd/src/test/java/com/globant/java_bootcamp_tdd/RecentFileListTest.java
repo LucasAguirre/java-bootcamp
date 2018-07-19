@@ -52,6 +52,7 @@ public class RecentFileListTest {
 		list.openFile(file6);
 		assert (!list.exist(file1));
 		assert (list.exist(file2));
+		
 	}
 
 }
