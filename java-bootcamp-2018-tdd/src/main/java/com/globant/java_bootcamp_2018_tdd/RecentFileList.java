@@ -1,5 +1,6 @@
-package com.globant.java_bootcamp_tdd;
+package com.globant.java_bootcamp_2018_tdd;
 
+import java.util.List;
 import java.io.File;
 import java.util.ArrayList;
 
@@ -48,5 +49,18 @@ public class RecentFileList {
 
 	public File lastElemment() {
 		return list.get(list.size() - 1);
+	}
+
+	public void deleteFile(File file) {
+		if (list.contains(file)) {
+			list.remove(file);
+		}
+	}
+
+	public List<File> getLastFiles(int n) {
+		if (n < list.size()) {
+			return list.subList(list.size()-1-n,list.size());
+		}
+		return  list.subList(0, list.size());
 	}
 }
