@@ -9,9 +9,7 @@ import java.util.Vector;
 
 import org.junit.Test;
 
-
 public class RecentFileListTest {
-
 
 	// For this tests the list of recent opened files have a size of 5, the
 	// predetermined(in the recent file list class) is 15
@@ -38,7 +36,7 @@ public class RecentFileListTest {
 		list.openFile(file2);
 		list.openFile(file3);
 		list.openFile(file1);
-		assertEquals("A reopen file is not on the top of the list",file1, list.lastElemment());
+		assertEquals("A reopen file is not on the top of the list", file1, list.lastElemment());
 	}
 
 	@Test
@@ -61,11 +59,12 @@ public class RecentFileListTest {
 
 	@Test
 	public final void testDeleteAEntry() {
-		File file=new File("t5-1");
+		File file = new File("t5-1");
 		list.openFile(file);
 		list.deleteFile(file);
-		assert(!list.exist(file));
+		assert (!list.exist(file));
 	}
+
 	@Test
 	public final void testShowTheLastNFiles() {
 		File file1 = new File("t6-1");
@@ -76,11 +75,12 @@ public class RecentFileListTest {
 		list.openFile(file2);
 		list.openFile(file3);
 		list.openFile(file4);
-		List <File> testList= new ArrayList<File>();
+		List<File> testList = new ArrayList<File>();
 		testList.add(file1);
 		testList.add(file2);
 		testList.add(file3);
 		testList.add(file4);
-		assertEquals("The elements returned in getLastFiles are incorrect ",testList.toString(),list.getLastFiles(3).toString());
+		assertEquals("The elements returned in getLastFiles are incorrect ", testList.toString(),
+				list.getLastFiles(3).toString());
 	}
 }

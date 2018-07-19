@@ -59,8 +59,8 @@ public class RecentFileList {
 
 	public List<File> getLastFiles(int n) {
 		if (n < list.size()) {
-			return list.subList(list.size()-1-n,list.size());
+			return list.subList(list.size() - 1 - n, list.size());
 		}
-		return  list.subList(0, list.size());
+		return list.subList(0, list.size());
 	}
 }
