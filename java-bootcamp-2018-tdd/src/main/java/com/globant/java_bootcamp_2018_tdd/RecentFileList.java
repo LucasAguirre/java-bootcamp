@@ -3,6 +3,7 @@ package com.globant.java_bootcamp_2018_tdd;
 import java.util.List;
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class RecentFileList {
 
@@ -24,7 +25,9 @@ public class RecentFileList {
 
 	public void openFile(File file) {
 		if (list.size() >= maxSize) {
-			list.remove(0);
+			Iterator<File> iterator =list.iterator();
+			iterator.next();
+			iterator.remove();
 		}
 		if (!list.contains(file)) {
 			list.add(file);
@@ -55,6 +58,15 @@ public class RecentFileList {
 		if (list.contains(file)) {
 			list.remove(file);
 		}
+	}
+
+	public int getPosition(File file) {
+		//returns the position of a file in the list
+		//return -1 if don´t exist
+		if(list.contains(file)) {
+			return list.indexOf(file);
+		}
+		return -1;
 	}
 
 	public List<File> getLastFiles(int n) {
