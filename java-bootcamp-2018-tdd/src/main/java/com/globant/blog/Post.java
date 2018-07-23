@@ -3,6 +3,9 @@ package com.globant.blog;
 import java.util.Date;
 
 public class Post {
+	/**
+	 * Basic Post, have a title and a text
+	 */
 
 	private String title;
 	private String text;
@@ -26,13 +29,6 @@ public class Post {
 
 	public void setText(String text) {
 		this.text = text;
-	}
-
-	public int compareTo(Post post) {
-		if ((post.getTitle().equals(this.title)) && (post.getText().equalsIgnoreCase(this.text))) {
-			return 0;
-		}
-		return 1;
 	}
 
 	@Override
