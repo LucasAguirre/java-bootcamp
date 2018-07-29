@@ -62,7 +62,7 @@ public class MySQLAccess {
 				"SELECT c.name AS CourseName, t.lastName AS TeacherlastName , t.firstName AS TeacherfirstName, s.lastName AS StudentlastName, s.firstName AS StudentfirstName"
 						+ " FROM Course c " + "	INNER JOIN Teacher t ON c.assignedTeacher=t.id"
 						+ "	INNER JOIN StudentXCourse sc ON c.id=sc.courseId"
-						+ "	INNER JOIN Student s ON s.registration_number = sc.studentId" + " WHERE c.name ='"
+						+ "	INNER JOIN Student s ON s.registrationNumber = sc.studentId" + " WHERE c.name ='"
 						+ givenCourse + "'" + " ORDER BY c.name, s.lastName ASC");
 		listStudentsByCourse();
 	}
@@ -79,7 +79,7 @@ public class MySQLAccess {
 				"SELECT c.name AS CourseName, t.lastName AS TeacherlastName , t.firstName AS TeacherfirstName, s.lastName AS StudentlastName, s.firstName AS StudentfirstName"
 						+ " FROM Course c " + "	INNER JOIN Teacher t ON c.assignedTeacher=t.id"
 						+ "	INNER JOIN StudentXCourse sc ON c.id=sc.courseId"
-						+ "	INNER JOIN Student s ON s.registration_number = sc.studentId"
+						+ "	INNER JOIN Student s ON s.registrationNumber = sc.studentId"
 						+ " ORDER BY c.name, s.lastName ASC");
 		listStudentsByCourse();
 
