@@ -1,0 +1,89 @@
+use highschool;
+
+db.Teacher.insertMany([
+{"firstName":"TeacherOneFirstName",	"lastName":"TeacherOneLastName",	"dateOfBirth": new Date("9/28/1985")},	
+{"firstName":"TeacherTwoFirstName",	"lastName":"TeacherTwoLastName",	"dateOfBirth": new Date("5/15/1966")},	
+{"firstName":"TeacherThreeFirstName",	"lastName":"TeacherThreeLastName",	"dateOfBirth": new Date("12/25/2000")}
+]);
+	
+db.Course.insertMany([	
+{"name":"CouserOneName",	"assignedTeacher":1,	"hoursByWeek":12},
+{"name":"CouserTwoName",	"assignedTeacher":2,	"hoursByWeek":20},	
+{"name":"CouserThreeName",	"assignedTeacher":3,	"hoursByWeek":4}
+]);
+
+db.ScheduleTime.insertMany([
+{"courseId":1,	"dayOfWeek":"Tuesday",	"startHour":"14:00",	"finishHour":"18:00"},	
+{"courseId":1,	"dayOfWeek":"Wednesday",	"startHour":"8:30",	"finishHour":"11:30"},	
+{"courseId":1,	"dayOfWeek":"Friday",	"startHour":"10:30",	"finishHour":"15:30"},	
+{"courseId":2,	"dayOfWeek":"Tuesday",	"startHour":"11:00",	"finishHour":"12:15"},	
+{"courseId":2,	"dayOfWeek":"Thursday",	"startHour":"8:00",	"finishHour":"17:45"},	
+{"courseId":2,	"dayOfWeek":"Friday",	"startHour":"12:00",	"finishHour":"21:00"},	
+{"courseId":3,	"dayOfWeek":"Wednesday",	"startHour":"9:30",	"finishHour":"13:30"}
+]);
+
+db.Student.insertMany([
+{"firstName":"StudentOneFirstName",	"lastName":"StudentOneLastName",	"dateOfBirth":"6/22/1999"},	
+{"firstName":"StudentTwoFirstName",	"lastName":"StudentTwoLastName",	"dateOfBirth":"6/22/1999"},	
+{"firstName":"StudentThreeFirstName",	"lastName":"StudentThreeLastName",	"dateOfBirth":"1/1/1998"},	
+{"firstName":"StudentFourFirstName",	"lastName":"StudentFourLastName",	"dateOfBirth":"3/4/1998"},	
+{"firstName":"StudentFiveFirstName",	"lastName":"StudentFiveLastName",	"dateOfBirth":"4/11/1999"},	
+{"firstName":"StudentSixFirstName",	"lastName":"StudentSixLastName",	"dateOfBirth":"5/15/1993"},	
+{"firstName":"StudentSevenFirstName",	"lastName":"StudentSevenLastName",	"dateOfBirth":"7/29/1995"},	
+{"firstName":"StudentEightFirstName",	"lastName":"StudentEightLastName",	"dateOfBirth":"5/28/1993"},	
+{"firstName":"StudentNineFirstName",	"lastName":"StudentNineLastName",	"dateOfBirth":"7/4/1995"},	
+{"firstName":"StudentTenFirstName",	"lastName":"StudentTenLastName",	"dateOfBirth":"11/13/1999"},	
+{"firstName":"StudentElevenFirstName",	"lastName":"StudentElevenLastName",	"dateOfBirth":"10/7/2000"},	
+{"firstName":"StudentTwelveFirstName",	"lastName":"StudentTwelveLastName",	"dateOfBirth":"5/25/1997"},	
+{"firstName":"StudentThirteenFirstName",	"lastName":"StudentThirteenLastName",	"dateOfBirth":"6/26/1998"},	
+{"firstName":"StudentFourteenFirstName",	"lastName":"StudentFourteenLastName",	"dateOfBirth":"9/22/1999"},	
+{"firstName":"StudentFiveteenFirstName",	"lastName":"StudentFiveteenLastName",	"dateOfBirth":"7/1/1996"},	
+{"firstName":"StudentSixteenFirstName",	"lastName":"StudentSixteenLastName",	"dateOfBirth":"8/7/1999"},	
+{"firstName":"StudentSeventeenFirstName",	"lastName":"StudentSeventeenLastName",	"dateOfBirth":"2/19/1999"},	
+{"firstName":"StudentEightteenFirstName",	"lastName":"StudentEightteenLastName",	"dateOfBirth":"3/14/1999"},	
+{"firstName":"StudentNineteenFirstName",	"lastName":"StudentNineteenLastName",	"dateOfBirth":"3/15/1999"},	
+{"firstName":"StudentTwentyFirstName",	"lastName":"StudentTwentyLastName",	"dateOfBirth":"6/16/1998"},	
+{"firstName":"StudentTwentyOneFirstName",	"lastName":"StudentTwentyOneLastName",	"dateOfBirth":"6/22/1998"},	
+{"firstName":"StudentTwentyTwoFirstName",	"lastName":"StudentTwentyTwoLastName",	"dateOfBirth":"6/21/1999"},	
+{"firstName":"StudentTwentyThreeFirstName",	"lastName":"StudentTwentyThreeLastName",	"dateOfBirth":"5/21/1999"},	
+{"firstName":"StudentTwentyFourFirstName",	"lastName":"StudentTwentyFourLastName",	"dateOfBirth":"4/5/1998"},	
+{"firstName":"StudentTwentyFiveFirstName",	"lastName":"StudentTwentyFiveLastName",	"dateOfBirth":"9/19/1994"},	
+{"firstName":"StudentTwentySixFirstName",	"lastName":"StudentTwentySixLastName",	"dateOfBirth":"7/8/1991"},	
+{"firstName":"StudentTwentySevenFirstName",	"lastName":"StudentTwentySevenLastName",	"dateOfBirth":"7/9/1995"},	
+{"firstName":"StudentTwentyEightFirstName",	"lastName":"StudentTwentyEightLastName",	"dateOfBirth":"8/9/1995"},	
+{"firstName":"StudentTwentyNineFirstName",	"lastName":"StudentTwentyNineLastName",	"dateOfBirth":"11/7/1996"},	
+{"firstName":"StudentThirtyFirstName",	"lastName":"StudentThirtyLastName",	"dateOfBirth":"12/30/1999"}
+]);
+
+db.StudentXCourse.insertMany([
+{"studentId":1,	"courseId":1,	"partialNote1":4,	"partialNote2":null,	"partialNote3":null,	"finalNote":null},	
+{"studentId":2,	"courseId":1,	"partialNote1":5,	"partialNote2":null,	"partialNote3":null,	"finalNote":null},	
+{"studentId":3,	"courseId":1,	"partialNote1":6,	"partialNote2":null,	"partialNote3":null,	"finalNote":null},	
+{"studentId":4,	"courseId":1,	"partialNote1":8,	"partialNote2":null,	"partialNote3":null,	"finalNote":null},	
+{"studentId":5,	"courseId":1,	"partialNote1":9,	"partialNote2":null,	"partialNote3":null,	"finalNote":null},	
+{"studentId":6,	"courseId":1,	"partialNote1":3,	"partialNote2":null,	"partialNote3":null,	"finalNote":null},	
+{"studentId":7,	"courseId":1,	"partialNote1":4,	"partialNote2":null,	"partialNote3":null,	"finalNote":null},	
+{"studentId":8,	"courseId":1,	"partialNote1":5,	"partialNote2":null,	"partialNote3":null,	"finalNote":null},	
+{"studentId":9,	"courseId":1,	"partialNote1":7,	"partialNote2":null,	"partialNote3":null,	"finalNote":null},	
+{"studentId":10,	"courseId":1,	"partialNote1":7,	"partialNote2":null,	"partialNote3":null,	"finalNote":null},	
+{"studentId":11,	"courseId":2,	"partialNote1":4,	"partialNote2":8,	"partialNote3":null,	"finalNote":null},	
+{"studentId":12,	"courseId":2,	"partialNote1":8,	"partialNote2":8,	"partialNote3":null,	"finalNote":null},	
+{"studentId":13,	"courseId":2,	"partialNote1":9,	"partialNote2":8,	"partialNote3":null,	"finalNote":null},	
+{"studentId":14,	"courseId":2,	"partialNote1":10,	"partialNote2":8,	"partialNote3":null,	"finalNote":null},	
+{"studentId":15,	"courseId":2,	"partialNote1":10,	"partialNote2":4,	"partialNote3":null,	"finalNote":null},	
+{"studentId":16,	"courseId":2,	"partialNote1":7,	"partialNote2":4,	"partialNote3":null,	"finalNote":null},	
+{"studentId":17,	"courseId":2,	"partialNote1":8,	"partialNote2":2,	"partialNote3":null,	"finalNote":null},	
+{"studentId":18,	"courseId":2,	"partialNote1":6,	"partialNote2":2,	"partialNote3":null,	"finalNote":null},	
+{"studentId":19,	"courseId":2,	"partialNote1":3,	"partialNote2":10,	"partialNote3":null,	"finalNote":null},	
+{"studentId":20,	"courseId":2,	"partialNote1":4,	"partialNote2":5,	"partialNote3":null,	"finalNote":null},	
+{"studentId":21,	"courseId":3,	"partialNote1":8,	"partialNote2":7,	"partialNote3":9,	"finalNote":8},	
+{"studentId":22,	"courseId":3,	"partialNote1":7,	"partialNote2":8,	"partialNote3":7,	"finalNote":7},	
+{"studentId":23,	"courseId":3,	"partialNote1":7,	"partialNote2":8,	"partialNote3":8,	"finalNote":8},	
+{"studentId":24,	"courseId":3,	"partialNote1":8,	"partialNote2":7,	"partialNote3":8,	"finalNote":8},	
+{"studentId":25,	"courseId":3,	"partialNote1":9,	"partialNote2":5,	"partialNote3":4,	"finalNote":6},	
+{"studentId":26,	"courseId":3,	"partialNote1":10,	"partialNote2":7,	"partialNote3":4,	"finalNote":7},	
+{"studentId":27,	"courseId":3,	"partialNote1":10,	"partialNote2":4,	"partialNote3":5,	"finalNote":6},	
+{"studentId":28,	"courseId":3,	"partialNote1":10,	"partialNote2":6,	"partialNote3":4,	"finalNote":7},	
+{"studentId":29,	"courseId":3,	"partialNote1":5,	"partialNote2":8,	"partialNote3":5,	"finalNote":6},	
+{"studentId":30,	"courseId":3,	"partialNote1":7,	"partialNote2":8,	"partialNote3":6,	"finalNote":7}
+]);
