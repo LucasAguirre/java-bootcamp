@@ -1,0 +1,212 @@
+openapi: 3.0.1
+info:
+  title: ApiRestPractice
+  description: first api rest document whit swagger
+  version: "1.0.1"
+servers:
+  - url: 'http://localhost:8080'
+paths:
+  /create:
+    get:
+      description: Auto generated using Swagger Inspector
+      parameters:
+        - name: firstName
+          in: query
+          schema:
+            type: string
+          example: lucas
+        - name: lastName
+          in: query
+          schema:
+            type: string
+          example: aguirre
+        - name: password
+          in: query
+          schema:
+            type: string
+          example: '123456'
+        - name: nickName
+          in: query
+          schema:
+            type: string
+          example: lucas.aguirre
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                type: string
+              examples: {}
+  /user/id:
+    get:
+      description: Auto generated using Swagger Inspector
+      parameters:
+        - name: id
+          in: query
+          schema:
+            type: string
+          example: '0'
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                type: string
+              examples: {}
+  /user/name:
+    get:
+      description: Auto generated using Swagger Inspector
+      parameters:
+        - name: firstName
+          in: query
+          schema:
+            type: string
+          example: lucas
+        - name: lastName
+          in: query
+          schema:
+            type: string
+          example: aguirre
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                type: string
+              examples: {}
+  /delete:
+    get:
+      description: Auto generated using Swagger Inspector
+      parameters:
+        - name: id
+          in: query
+          schema:
+            type: string
+          example: '0'
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                type: string
+              examples: {}
+  /users:
+    get:
+      description: Auto generated using Swagger Inspector
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                type: string
+              examples: {}
+  /update/lastName:
+    get:
+      description: Auto generated using Swagger Inspector
+      parameters:
+        - name: lastName
+          in: query
+          schema:
+            type: string
+          example: Aguirre
+        - name: id
+          in: query
+          schema:
+            type: string
+          example: '0'
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                type: string
+              examples: {}
+  /update/password:
+    get:
+      description: Auto generated using Swagger Inspector
+      parameters:
+        - name: password
+          in: query
+          schema:
+            type: string
+          example: '654312'
+        - name: id
+          in: query
+          schema:
+            type: string
+          example: '0'
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                type: string
+              examples: {}
+  /update/firstName:
+    get:
+      description: Auto generated using Swagger Inspector
+      parameters:
+        - name: firstName
+          in: query
+          schema:
+            type: string
+          example: Lucas
+        - name: id
+          in: query
+          schema:
+            type: string
+          example: '0'
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                type: string
+              examples: {}
+  /update/nickName:
+    get:
+      description: Auto generated using Swagger Inspector
+      parameters:
+        - name: nickName
+          in: query
+          schema:
+            type: string
+          example: Aguirre.Lucas
+        - name: id
+          in: query
+          schema:
+            type: string
+          example: '0'
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                type: string
+              examples: {}
+  /user/nickName:
+    get:
+      description: Auto generated using Swagger Inspector
+      parameters:
+        - name: nickName
+          in: query
+          schema:
+            type: string
+          example: lucas.aguirre
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                type: string
+              examples: {}
