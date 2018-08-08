@@ -6,7 +6,7 @@ public class Product {
 	 */
 	private String name;
 	private String category;
-	private double price;
+	private float price;
 
 	/**
 	 * Constructor
@@ -15,7 +15,7 @@ public class Product {
 	 * @param description
 	 * @param price
 	 */
-	public Product(String name, String category, double price) {
+	public Product(String name, String category, float price) {
 		this.name = name;
 		this.category = category;
 		this.price = price;
@@ -60,9 +60,9 @@ public class Product {
 	/**
 	 * Obtain the price of the product
 	 * 
-	 * @return (double) the price
+	 * @return (float) the price
 	 */
-	public double getPrice() {
+	public float getPrice() {
 		return price;
 	}
 
@@ -71,7 +71,7 @@ public class Product {
 	 * 
 	 * @param price
 	 */
-	public void setPrice(double price) {
+	public void setPrice(float price) {
 		this.price = price;
 	}
 
@@ -80,9 +80,9 @@ public class Product {
 	 */
 	@Override
 	public boolean equals(Object product) {
-		if ((((Product) product).getName().equalsIgnoreCase(this.name))
-				&& (((Product) product).getCategory().equalsIgnoreCase(this.category))
-				&& (((Product) product).getPrice() == this.price)) {
+		Product prod = (Product) product;
+		if ((prod.getName().equalsIgnoreCase(this.name)) && (prod.getCategory().equalsIgnoreCase(this.category))
+				&& (prod.getPrice() == this.price)) {
 			return true;
 		}
 		return false;

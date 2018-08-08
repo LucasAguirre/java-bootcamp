@@ -113,12 +113,12 @@ public class MainController {
 	 * @return the sub total
 	 */
 	@RequestMapping(value = "/getSubTotal", method = RequestMethod.GET)
-	public Double getSubTotal(@RequestHeader(value = "sessionId") String session) throws Exception {
+	public float getSubTotal(@RequestHeader(value = "sessionId") String session) throws Exception {
 		UserModel currentUserModel = sql.findUser(sessions.get(session));
 		if (currentUserModel != null) {
 			return sql.findCart(currentUserModel.getNickName()).getSubtotal();
 		}
-		return (double) 0;
+		return (float) 0;
 	}
 
 	/**
@@ -129,10 +129,10 @@ public class MainController {
 	 * @return the total cost
 	 */
 	@RequestMapping(value = "/proceed", method = RequestMethod.GET)
-	public Double proceed(@RequestHeader(value = "sessionId") String session) throws Exception {
+	public float proceed(@RequestHeader(value = "sessionId") String session) throws Exception {
 		UserModel currentUserModel = sql.findUser(sessions.get(session));
 		IShoppingCart cart = sql.findCart(currentUserModel.getNickName());
-		double total = cart.process();
+		float total = cart.process();
 		sql.saveCart(currentUserModel.getNickName(), cart);
 		return total;
 	}

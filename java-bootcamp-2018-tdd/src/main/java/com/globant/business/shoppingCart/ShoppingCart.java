@@ -20,7 +20,7 @@ public class ShoppingCart implements IShoppingCart {
 	 * add a new product to the cart whit its quantity if the product is already in
 	 * the cart add the amount
 	 */
-	public Product addProduct(String name, String category, double price, int quantity) {
+	public Product addProduct(String name, String category, float price, int quantity) {
 		if (!products.containsKey(name)) {
 			RowCart row = new RowCart(new Product(name, category, price), quantity);
 			products.put(name, row);
@@ -61,8 +61,8 @@ public class ShoppingCart implements IShoppingCart {
 	/**
 	 * @return the subtotal of the products in the cart
 	 */
-	public double getSubtotal() {
-		double accum = 0;
+	public float getSubtotal() {
+		float accum = 0;
 		for (RowCart product : products.values()) {
 			accum += product.getProduct().getPrice() * product.getQuantity();
 		}
@@ -74,8 +74,8 @@ public class ShoppingCart implements IShoppingCart {
 	 * 
 	 * @return the total price of the purchase
 	 */
-	public double process() {
-		double accum = getSubtotal();
+	public float process() {
+		float accum = getSubtotal();
 		products.clear();
 		return accum;
 	}

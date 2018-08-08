@@ -11,7 +11,7 @@ public interface IShoppingCart {
 	 * 
 	 * @param product
 	 */
-	public Product addProduct(String name, String category, double price, int quantity);
+	public Product addProduct(String name, String category, float price, int quantity);
 
 	/**
 	 * change the amount of one product in the cart
@@ -32,14 +32,14 @@ public interface IShoppingCart {
 	 * 
 	 * @return the Subtotal of the purchase
 	 */
-	public double getSubtotal();
+	public float getSubtotal();
 
 	/**
 	 * calculate the total of the purchase and delete all products of the cart
 	 * 
 	 * @return total price
 	 */
-	public double process();
+	public float process();
 
 	/**
 	 * 

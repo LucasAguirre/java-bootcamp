@@ -8,7 +8,7 @@ public class ProductModel {
 
 	private String name;
 	private String category;
-	private Double price;
+	private float price;
 	private int quantity;
 
 	/**
@@ -44,7 +44,7 @@ public class ProductModel {
 	/**
 	 * @return the price
 	 */
-	public Double getPrice() {
+	public float getPrice() {
 		return price;
 	}
 
@@ -52,7 +52,7 @@ public class ProductModel {
 	 * @param price
 	 *            the price to set
 	 */
-	public void setPrice(Double price) {
+	public void setPrice(float price) {
 		this.price = price;
 	}
 

@@ -120,7 +120,7 @@ public class SQLConnection {
 		ProductModel product = new ProductModel();
 		if (resultSet.next()) {
 			product.setName(name);
-			product.setPrice(resultSet.getDouble(PRICE));
+			product.setPrice(resultSet.getFloat(PRICE));
 			product.setCategory(resultSet.getString(CATEGORY));
 		}
 		resultSet.close();
@@ -131,7 +131,7 @@ public class SQLConnection {
 	 * search a cart Id of a user
 	 * 
 	 * @param nickName
-	 * @return a cartId
+	 * @return a cartId or -1 if the user don´t have a cart created
 	 * @throws SQLException
 	 */
 	public int findCartId(String nickName) throws SQLException {
@@ -157,7 +157,6 @@ public class SQLConnection {
 		IShoppingCart cart = findCart(nickName);
 		cart.addProduct(product.getName(), product.getCategory(), product.getPrice(), quantity);
 		saveCart(nickName, cart);
-
 	}
 
 	/**
@@ -306,7 +305,7 @@ public class SQLConnection {
 		while (resultSet.next()) {
 			ProductModel product = new ProductModel();
 			product.setName(resultSet.getString(NAME));
-			product.setPrice(resultSet.getDouble(PRICE));
+			product.setPrice(resultSet.getFloat(PRICE));
 			product.setCategory(resultSet.getString(CATEGORY));
 			products.add(product);
 		}
@@ -328,7 +327,7 @@ public class SQLConnection {
 		while (resultSet.next()) {
 			ProductModel product = new ProductModel();
 			product.setName(resultSet.getString(NAME));
-			product.setPrice(resultSet.getDouble(PRICE));
+			product.setPrice(resultSet.getFloat(PRICE));
 			product.setCategory(resultSet.getString(CATEGORY));
 			products.add(product);
 		}
@@ -344,7 +343,7 @@ public class SQLConnection {
 	 * @param price
 	 * @throws SQLException
 	 */
-	public void addProduct(String name, String category, Double price) throws SQLException {
+	public void addProduct(String name, String category, float price) throws SQLException {
 		ProductModel product = findProduct(name);
 		if (product.getName() == null) {
 			statement.executeUpdate("INSERT INTO Products (name,category,price) VALUES ('" + name + "','" + category
@@ -381,7 +380,7 @@ public class SQLConnection {
 	 * @param price
 	 * @throws SQLException
 	 */
-	public void updatePrice(String name, double price) throws SQLException {
+	public void updatePrice(String name, float price) throws SQLException {
 		statement.executeUpdate("UPDATE Products " + "SET price = '" + price + "' WHERE name='" + name + "'");
 	}
 }
