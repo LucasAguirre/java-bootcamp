@@ -87,6 +87,7 @@ public class ShoppingCart implements IShoppingCart {
 		return products.size();
 	}
 
+	
 	/**
 	 * 
 	 * @return the list of rows
