@@ -19,7 +19,7 @@ public interface IShoppingCart {
 	 * @param product
 	 * @param quantity
 	 */
-	public Product changeamount(String product, int quantity);
+	public Product changeAmount(String product, int quantity);
 
 	/**
 	 * remove a existing product of the cart

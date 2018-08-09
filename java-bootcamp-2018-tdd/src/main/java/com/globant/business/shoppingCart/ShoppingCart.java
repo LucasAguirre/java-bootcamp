@@ -34,16 +34,21 @@ public class ShoppingCart implements IShoppingCart {
 	 * set the amount of one product in the cart if the new quantity is less than 1,
 	 * remove the product
 	 */
-	public Product changeamount(String product, int quantity) {
+	public Product changeAmount(String product, int quantity) {
 		if (quantity > 0) {
 			RowCart current = products.get(product);
-			current.changeAmmount(quantity);
-			return current.getProduct();
+			if (current != null) {
+				current.changeAmmount(quantity);
+				return current.getProduct();
+			}
 		} else {
 			RowCart current = products.get(product);
-			removeProduct(product);
-			return current.getProduct();
+			if (current != null) {
+				removeProduct(product);
+				return current.getProduct();
+			}
 		}
+		return null;
 	}
 
 	/**
@@ -87,7 +92,6 @@ public class ShoppingCart implements IShoppingCart {
 		return products.size();
 	}
 
-	
 	/**
 	 * 
 	 * @return the list of rows

@@ -81,7 +81,7 @@ public class MainController {
 		UserModel currentUserModel = sql.findUser(sessions.get(session));
 		if (currentUserModel != null) {
 			IShoppingCart cart = sql.findCart(currentUserModel.getNickName());
-			cart.changeamount(product.getProductName(), product.getQuantity());
+			cart.changeAmount(product.getProductName(), product.getQuantity());
 			sql.saveCart(currentUserModel.getNickName(), cart);
 			return product;
 		}
