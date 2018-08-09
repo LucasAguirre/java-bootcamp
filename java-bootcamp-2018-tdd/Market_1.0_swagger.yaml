@@ -1,0 +1,464 @@
+openapi: 3.0.1
+info:
+  title: defaultTitle
+  description: defaultDescription
+  version: "1.0"
+servers:
+  - url: 'http://localhost:8080'
+paths:
+  /user/create:
+    post:
+      description: Auto generated using Swagger Inspector
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                firstName:
+                  type: string
+                lastName:
+                  type: string
+                password:
+                  type: string
+                nickName:
+                  type: string
+            examples:
+              '0':
+                value: "{\n    \"nickName\":\"User8NickName\",\n\t\"firstName\":\"User8FirstName\",\n\t\"lastName\":\"User8LastName\",\n\t\"password\":\"User8Password\"\n}"
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+  /login:
+    post:
+      description: Auto generated using Swagger Inspector
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                password:
+                  type: string
+                nickName:
+                  type: string
+            examples:
+              '0':
+                value: |-
+                  {
+                      "nickName":"User6NickName",
+                      "password":"User6Password"
+                  }
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+          content:
+            text/plain;charset=UTF-8:
+              schema:
+                type: string
+              examples: {}
+  /changeAmmount:
+    put:
+      description: Auto generated using Swagger Inspector
+      parameters:
+        - name: sessionId
+          in: header
+          schema:
+            type: string
+          example: CFG5LZJHKA
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                quantity:
+                  type: integer
+                productName:
+                  type: string
+            examples:
+              '0':
+                value: |-
+                  {
+                      "productName":"Product4Name",
+                      "quantity":5
+                  }
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                type: string
+              examples: {}
+  /user/list:
+    get:
+      description: Auto generated using Swagger Inspector
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                type: string
+              examples: {}
+  /logout:
+    put:
+      description: Auto generated using Swagger Inspector
+      parameters:
+        - name: sessionId
+          in: header
+          schema:
+            type: string
+          example: CFG5LZJHKA
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+  /product/name:
+    get:
+      description: Auto generated using Swagger Inspector
+      parameters:
+        - name: name
+          in: query
+          schema:
+            type: string
+          example: Product2Name
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                type: string
+              examples: {}
+  /product/category:
+    get:
+      description: Auto generated using Swagger Inspector
+      parameters:
+        - name: category
+          in: query
+          schema:
+            type: string
+          example: Category3
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                type: string
+              examples: {}
+  /product/create:
+    post:
+      description: Auto generated using Swagger Inspector
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                price:
+                  type: number
+                name:
+                  type: string
+                category:
+                  type: string
+            examples:
+              '0':
+                value: |-
+                  {
+                      "name":"Product8Name",
+                      "category":"Category4",
+                      "price":150.54
+                  }
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+  /getSubTotal:
+    get:
+      description: Auto generated using Swagger Inspector
+      parameters:
+        - name: sessionId
+          in: header
+          schema:
+            type: string
+          example: CFG5LZJHKA
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                type: string
+              examples: {}
+  /user/nickName:
+    get:
+      description: Auto generated using Swagger Inspector
+      parameters:
+        - name: nickName
+          in: query
+          schema:
+            type: string
+          example: User7NickName
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                type: string
+              examples: {}
+  /product/update/category:
+    put:
+      description: Auto generated using Swagger Inspector
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                category:
+                  type: string
+            examples:
+              '0':
+                value: |-
+                  {
+                      "name":"Product6Name",
+                      "category":"Category7"
+                  }
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+  /user/name:
+    get:
+      description: Auto generated using Swagger Inspector
+      parameters:
+        - name: firstName
+          in: query
+          schema:
+            type: string
+          example: User2FirstName
+        - name: lastName
+          in: query
+          schema:
+            type: string
+          example: User2LastName
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                type: string
+              examples: {}
+  /user/delete:
+    delete:
+      description: Auto generated using Swagger Inspector
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                type: string
+              examples: {}
+  /product/list:
+    get:
+      description: Auto generated using Swagger Inspector
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                type: string
+              examples: {}
+  /user/update/firstName:
+    put:
+      description: Auto generated using Swagger Inspector
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                firstName:
+                  type: string
+                password:
+                  type: string
+                nickName:
+                  type: string
+            examples:
+              '0':
+                value: |-
+                  {
+                      "nickName":"User2NickName",
+                      "password":"User2Password",
+                      "firstName":"firstNameExample"
+                  }
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+  /amountOfProducts:
+    get:
+      description: Auto generated using Swagger Inspector
+      parameters:
+        - name: sessionId
+          in: header
+          schema:
+            type: string
+          example: CFG5LZJHKA
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                type: string
+              examples: {}
+  /addProduct:
+    post:
+      description: Auto generated using Swagger Inspector
+      parameters:
+        - name: sessionId
+          in: header
+          schema:
+            type: string
+          example: TFOUHS2ZKG
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                quantity:
+                  type: integer
+                productName:
+                  type: string
+            examples:
+              '0':
+                value: |-
+                  {
+                      "productName":"Product4Name",
+                      "quantity":4
+                  }
+      responses:
+        '500':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                type: string
+              examples: {}
+  /removeProduct:
+    delete:
+      description: Auto generated using Swagger Inspector
+      parameters:
+        - name: sessionId
+          in: header
+          schema:
+            type: string
+          example: CFG5LZJHKA
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+  /proceed:
+    get:
+      description: Auto generated using Swagger Inspector
+      parameters:
+        - name: sessionId
+          in: header
+          schema:
+            type: string
+          example: CFG5LZJHKA
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                type: string
+              examples: {}
+  /product/delete:
+    delete:
+      description: Auto generated using Swagger Inspector
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+    /user/update/lastName:
+    put:
+      description: Auto generated using Swagger Inspector
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                lastName:
+                  type: string
+                password:
+                  type: string
+                nickName:
+                  type: string
+            examples:
+              '0':
+                value: |-
+                  {
+                      "nickName":"User2NickName",
+                      "password":"User2Password",
+                      "lastName":"lastNameExample"
+                  }
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+  /product/update/price:
+    put:
+      description: Auto generated using Swagger Inspector
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                price:
+                  type: number
+                name:
+                  type: string
+            examples:
+              '0':
+                value: |-
+                  {
+                      "name":"Product6Name",
+                      "price":320.5
+                  }
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+  /user/update/password:
+    put:
+      description: Auto generated using Swagger Inspector
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                firstName:
+                  type: string
+                password:
+                  type: string
+                nickName:
+                  type: string
+            examples:
+              '0':
+                value: |-
+                  {
+                      "nickName":"User2NickName",
+                      "password":"User2Password",
+                      "firstName":"passwordExample"
+                  }
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
